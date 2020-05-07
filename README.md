@@ -1,2 +1,2 @@
 # demoCode
-java demo code proeject
+java demo code project
