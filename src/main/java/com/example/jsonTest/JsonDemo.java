@@ -25,14 +25,14 @@ public class JsonDemo {
 
 /*
 
-        public static final Object parse(String text); // ��JSON�ı�parseΪJSONObject����JSONArray
-        public static final JSONObject parseObject(String text)�� // ��JSON�ı�parse��JSONObject
-        public static final <T> T parseObject(String text, Class<T> clazz); // ��JSON�ı�parseΪJavaBean
-        public static final JSONArray parseArray(String text); // ��JSON�ı�parse��JSONArray
-        public static final <T> List<T> parseArray(String text, Class<T> clazz); //��JSON�ı�parse��JavaBean����
-        public static final String toJSONString(Object object); // ��JavaBean���л�ΪJSON�ı�
-        public static final String toJSONString(Object object, boolean prettyFormat); // ��JavaBean���л�Ϊ����ʽ��JSON�ı�
-        public static final Object toJSON(Object javaObject); ��JavaBeanת��ΪJSONObject����JSONArray��
+        public static final Object parse(String text);
+        public static final JSONObject parseObject(String text)
+        public static final <T> T parseObject(String text, Class<T> clazz);
+        public static final JSONArray parseArray(String text);
+        public static final <T> List<T> parseArray(String text, Class<T> clazz);
+        public static final String toJSONString(Object object);
+        public static final String toJSONString(Object object, boolean prettyFormat);
+        public static final Object toJSON(Object javaObject);
 */
 
         //List -> JSON array

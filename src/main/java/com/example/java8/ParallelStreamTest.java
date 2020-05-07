@@ -44,9 +44,9 @@ public class ParallelStreamTest {
 
     static class RiderDto implements Serializable {
         private static final long serialVersionUID = 1;
-        //����Id
+
         private Integer cityId;
-        //����Id
+
         private Integer id;
 
         public Integer getCityId() {

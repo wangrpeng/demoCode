@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 
 /*
- * java8������
+ * java8新特性
  */
 public class Java8Tester {
 
@@ -44,7 +44,7 @@ public class Java8Tester {
 
     private void java7Sort(List<String> list) {
         Collections.sort(list, new Comparator<String>() {
-            public int compare(String name1, String name2) {
+            public int compare(String name1,String name2){
                 return name1.compareTo(name2);
             }
         });
@@ -52,27 +52,12 @@ public class Java8Tester {
 
     }
 
-    private void java8Sort(List<String> names) {
-        //Lambda���ʽʵ����Comparator�ӿ�(����ʽ�ӿ�)������ʽ�ӿ�ֻ���������󷽷�
-        //int compareTo(String anotherString){} ������������������һ��intֵ
-        Collections.sort(names, (a, b) -> a.compareTo(b));
+    private void java8Sort(List<String> names){
+        //Lambda表达式实例化Comparator接口(函数式接口)，函数式接口只能声明抽象方法
+        //int compareTo(String anotherString){} 传入两个参数，返回一个int值
+        Collections.sort(names, (a,b)->a.compareTo(b));
+        Collections.sort(names, String::compareTo);
     }
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

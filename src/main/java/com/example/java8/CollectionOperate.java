@@ -77,6 +77,27 @@ public class CollectionOperate {
     }
 
 
+    public void test() {
+        List<String> list = new ArrayList<>();
+
+        List<Integer> integerList = list.stream().map(p -> new Integer(p))
+                .filter(p -> Primes.isPrime(p))
+                .distinct().collect(Collectors.toList());
+       Map groupMap =  list.stream().map(p -> new Integer(p))
+               .filter(p -> Primes.isPrime(p))
+               .collect(Collectors.groupingBy(p -> p,Collectors.summingInt(p -> 1)));
+        list.stream().map(p -> new Integer(p))
+                .filter(p -> Primes.isPrime(p))
+                .distinct()
+                .reduce(0, (x, y) -> x + y);
+
+        List<Person> persons = new ArrayList<>();
+        persons.stream().filter(p -> p.getAge() >= 25 && p.getAge() <= 35)
+                .collect(Collectors.groupingBy(p -> p.getSex(), Collectors.summingInt(p -> 1)));
+
+    }
+
+
     //给出一个String类型的数组，找出其中所有不重复的素数
     public void distinctPrimary(String... numbers) {
         List<String> l = Arrays.asList(numbers);
@@ -87,6 +108,9 @@ public class CollectionOperate {
                 .collect(Collectors.toList());
         System.out.println("distinctPrimary result is: " + r);
     }
+
+
+
 
     //给出一个String类型的数组，找出其中各个素数，并统计其出现次数
     public void primaryOccurrence(String... numbers) {
